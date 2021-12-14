@@ -14,37 +14,37 @@ public class Q13 {
          * indirim yapin
          */
         Scanner scan = new Scanner(System.in);
-        System.out.println("Lütfen kaç adet ürün aldığınızı giriniz: ");
-        int alınanUrunSayısı = scan.nextInt();
+        System.out.println("Lütfen kaç adet ürün aldiğinizi giriniz: ");
+        int alinanUrunSayisi = scan.nextInt();
         int toplam = 0;
-        int urunFiyatı = 0;
+        int urunFiyati = 0;
         int i = 1;
-        while (i <= alınanUrunSayısı) {
-            System.out.println("Lütfen aldığınız " + i + ". ürünün fiyatını giriniz: ");
-            urunFiyatı = scan.nextInt();
+        while (i <= alinanUrunSayisi) {
+            System.out.println("Lütfen aldiğiniz " + i + ". ürünün fiyatini giriniz: ");
+            urunFiyati = scan.nextInt();
             i++;
-            toplam += urunFiyatı;
+            toplam += urunFiyati;
         }
-        System.out.println("Müşteri kartınız var mı? \n\n 'EVET' ya da 'HAYIR'");
-        char musteriKartı = scan.next().toUpperCase().charAt(0);
-        if (musteriKartı == 'E') {
-            if (alınanUrunSayısı >= 10) {
+        System.out.println("Müşteri kartiniz var mi? \n\n 'EVET' ya da 'HAYIR'");
+        char musteriKarti = scan.next().toUpperCase().charAt(0);
+        if (musteriKarti == 'E') {
+            if (alinanUrunSayisi >= 10) {
                 System.out.println(
-                        "\nMüşteri kartınız olduğu için alışverişinize %15 indirim uygulanmıştır. Ek olarak 10'dan fazla ürün aldığınız için bu indirim %20'ye yükseltilmiştir. "
-                                + "\n%20 indirim sonrası ödemeniz gereken tutar: " + (toplam - toplam * 20 / 100)
+                        "\nMüşteri kartiniz olduğu için alişverişinize %15 indirim uygulanmiştir. Ek olarak 10'dan fazla ürün aldiğiniz için bu indirim %20'ye yükseltilmiştir. "
+                                + "\n%20 indirim sonrasi ödemeniz gereken tutar: " + (toplam - toplam * 20 / 100)
                                 + " TL");
             } else {
                 System.out.println(
-                        "\nMüşteri kartınız olduğu için alışverişinize %15 indirim uygulanmıştır. \n%15 indirim sonrası ödemeniz gereken tutar: "
+                        "\nMüşteri kartiniz olduğu için alişverişinize %15 indirim uygulanmiştir. \n%15 indirim sonrasi ödemeniz gereken tutar: "
                                 + (toplam - toplam * 15 / 100) + " TL");
             }
-        } else if (musteriKartı == 'H') {
-            if (alınanUrunSayısı >= 10) {
-                System.out.println("\\n10'dan fazla ürün aldığınız için alışverişinize %15 indirim uygulanmıştır. "
-                        + "\n%15 indirim sonrası ödemeniz gereken tutar: " + (toplam - toplam * 15 / 100) + " TL");
+        } else if (musteriKarti == 'H') {
+            if (alinanUrunSayisi >= 10) {
+                System.out.println("\\n10'dan fazla ürün aldiğiniz için alişverişinize %15 indirim uygulanmiştir. "
+                        + "\n%15 indirim sonrasi ödemeniz gereken tutar: " + (toplam - toplam * 15 / 100) + " TL");
             } else {
                 System.out
-                        .println("\\nBugüne özel %10 indirim kazandınız. \n%10 indirim sonrası ödemeniz gereken tutar: "
+                        .println("\\nBugüne özel %10 indirim kazandiniz. \n%10 indirim sonrasi ödemeniz gereken tutar: "
                                 + (toplam - toplam * 10 / 100) + " TL");
             }
         }

@@ -5,52 +5,52 @@ import java.util.Scanner;
 public class Q04 {
     public static void main(String[] args) {
 
-        // Bugüne göre 100 gün sonra hangi gün olduğunuz yazdırınız.
+        // Bugune göre 100 gun sonra hangi gun olduğunuz yazdiriniz.
         // pazartesi
         Scanner scan = new Scanner(System.in);
         System.out.print(
-                "Pazartesi: 1 \nSalı: 2 \nÇarşamba: 3 \nPerşembe: 4 \nCuma: 5 \nCumartesi: 6 \nPazar: 7 \nLütfen haftanın kaçıncı gününde olduğunuzu yazın: ");
-        int kancıncıGun = scan.nextInt();
-        System.out.println("Lütfen kaç gün sonrasını merak ettiğinizi yazın :");
+                "Pazartesi: 1 \nSali: 2 \nÇarşamba: 3 \nPerşembe: 4 \nCuma: 5 \nCumartesi: 6 \nPazar: 7 \nLutfen haftanin kaçinci gununde olduğunuzu yazin: ");
+        int kancinciGun = scan.nextInt();
+        System.out.println("Lutfen kaç gun sonrasini merak ettiğinizi yazin :");
         int kacGun = scan.nextInt();
-        int hangiGün = (kacGun % 7 + kancıncıGun) % 7;
-        if (kancıncıGun <= 7 && kancıncıGun > 0) {
+        int hangiGun = (kacGun % 7 + kancinciGun) % 7;
+        if (kancinciGun <= 7 && kancinciGun > 0) {
             if (kacGun > 0) {
-                switch (hangiGün) {
+                switch (hangiGun) {
                     case 1: {
-                        System.out.println(kacGun + " gün sonra günlerden Pazartesi.");
+                        System.out.println(kacGun + " gun sonra gunlerden Pazartesi.");
                         break;
                     }
                     case 2: {
-                        System.out.println(kacGun + " gün sonra günlerden Salı.");
+                        System.out.println(kacGun + " gun sonra gunlerden Sali.");
                         break;
                     }
                     case 3: {
-                        System.out.println(kacGun + " gün sonra günlerden Çarşamba.");
+                        System.out.println(kacGun + " gun sonra gunlerden Çarşamba.");
                         break;
                     }
                     case 4: {
-                        System.out.println(kacGun + " gün sonra günlerden Perşembe.");
+                        System.out.println(kacGun + " gun sonra gunlerden Perşembe.");
                         break;
                     }
                     case 5: {
-                        System.out.println(kacGun + " gün sonra günlerden Cuma.");
+                        System.out.println(kacGun + " gun sonra gunlerden Cuma.");
                         break;
                     }
                     case 6: {
-                        System.out.println(kacGun + " gün sonra günlerden Cumartesi.");
+                        System.out.println(kacGun + " gun sonra gunlerden Cumartesi.");
                         break;
                     }
                     case 7: {
-                        System.out.println(kacGun + " gün sonra günlerden Pazar.");
+                        System.out.println(kacGun + " gun sonra gunlerden Pazar.");
                         break;
                     }
                 }
             } else {
-                System.out.println("Geçmiş geçmişte kaldı :)");
+                System.out.println("Geçmiş geçmişte kaldi :)");
             }
         } else {
-            System.out.println("Hafta 7 gün dostum!");
+            System.out.println("Hafta 7 gun dostum!");
         }
     }
 }

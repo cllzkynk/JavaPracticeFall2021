@@ -2,21 +2,21 @@ package _03_IfStatement_TernaryOperator;
 
 import java.util.Scanner;
 
-public class Q17_ArtıkYil {
+public class Q17_ArtikYil {
 
 	public static void main(String[] args) {
 		// artik yil sorusu
 
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Lütfen bir yıl giriniz : ");
+		System.out.print("Lütfen bir yil giriniz : ");
 		int year = scan.nextInt();
 		System.out.println ("   ***   if cözumu   ***   ");
 		if (year % 100 == 0 && year % 400 == 0) {
-			System.out.println("Girdiğiniz"+year + " yılı ARTIK YIL");
+			System.out.println("Girdiğiniz"+year + " yili ARTIK YIL");
 		} else if (year % 100 != 0 && year % 4 == 0) {
-			System.out.println("Girdiğiniz"+year + " yılı ARTIK YIL");
+			System.out.println("Girdiğiniz"+year + " yili ARTIK YIL");
 		} else {
-			System.out.println("Girdiğiniz"+year + " yılı ARTIK YIL değildir.");
+			System.out.println("Girdiğiniz"+year + " yili ARTIK YIL değildir.");
 		}
 
 		//  ternary cozumu ...

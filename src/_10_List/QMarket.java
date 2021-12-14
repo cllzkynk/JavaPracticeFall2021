@@ -8,21 +8,21 @@ import java.util.Scanner;
 
 public class QMarket {
     /*
-     * Bir bakkalın 7 günlük tüm kazançlarını günlük olarak gösteren bir program yazınız.
+     * Bir bakkalın 7 gunluk tum kazançlarını gunluk olarak gösteren bir program yazınız.
      * Ayrıca bakkalın bu hafta ortalama kazandığı miktarı gösteren bir method yazınız.
-     * Ayrıca bakkalın hangi günler ortalamanın üstüne kazandığını gösteren bir method yazınız.
-     * Ayrıca bakkalın hangi günler ortalamanın altında kazandığını gösteren bir method yazınız.
+     * Ayrıca bakkalın hangi gunler ortalamanın ustune kazandığını gösteren bir method yazınız.
+     * Ayrıca bakkalın hangi gunler ortalamanın altında kazandığını gösteren bir method yazınız.
      *
-     * 1. Adım : Günleri içeren bir tane ArrayList oluşturun. (gunler)
-     * 2. Adım : Günlük kazançları ekleyeceğimiz bir tane ArrayList oluşturun. (gunlukKazanclar)
-     * 3. Adım : While döngüsü ile kullanıcıdan 7 günlük kazançları tekek teker alıp gunlukKazanclar ArrayList'e ekle.
+     * 1. Adım : Gunleri içeren bir tane ArrayList oluşturun. (gunler)
+     * 2. Adım : Gunluk kazançları ekleyeceğimiz bir tane ArrayList oluşturun. (gunlukKazanclar)
+     * 3. Adım : While döngusu ile kullanıcıdan 7 gunluk kazançları tekek teker alıp gunlukKazanclar ArrayList'e ekle.
      * 4. Adım : getOrtalamaKazanc() adlı method ile ortalama kazancı alın.
-     * 5. Adım : getOrtalamaninUstundeKazancGünleri() adlı method oluşturun.
-     * 			 for döngüsü ile tüm günleri ortalama kazanç ile karşılaştır
-     * 			 ortalama kazançtan yüksekse o günleri return yap.
-     * 6. Adım : getOrtalamaninAltindaKazancGünleri() adlı method oluşturun.
-     * 			 for döngüsü ile tüm günleri ortalama kazanç ile karşılaştır
-     * 			 ortalama kazançtan aşağıysa o günleri return yap.
+     * 5. Adım : getOrtalamaninUstundeKazancGunleri() adlı method oluşturun.
+     * 			 for döngusu ile tum gunleri ortalama kazanç ile karşılaştır
+     * 			 ortalama kazançtan yuksekse o gunleri return yap.
+     * 6. Adım : getOrtalamaninAltindaKazancGunleri() adlı method oluşturun.
+     * 			 for döngusu ile tum gunleri ortalama kazanç ile karşılaştır
+     * 			 ortalama kazançtan aşağıysa o gunleri return yap.
      * */
 
 
@@ -35,24 +35,24 @@ public class QMarket {
         int gun = 0;
         Scanner sc = new Scanner(System.in);
         while (gun < 7) {//3. adım
-            System.out.print(gunler.get(gun) + " gününün kazancını giriniz : ");//gunler listinden aldığım gün için kullanııcdan o günün hasılatını istedim.
+            System.out.print(gunler.get(gun) + " gununun kazancını giriniz : ");//gunler listinden aldığım gun için kullanııcdan o gunun hasılatını istedim.
             double gunlukhasilat = sc.nextDouble();//istediğim hasılatı gunluk hasılata atadım
-            gunlukKazanclar.add(gunlukhasilat);//aldığım günlük hasılatı gunlukKazanclar listine ekledim.
-            ciro += gunlukhasilat;//aldığım günlük hasılatı kasaya ekledim.
-            gun++;//0 1 2 3 4 5 6 .günleri çağırdım.
+            gunlukKazanclar.add(gunlukhasilat);//aldığım gunluk hasılatı gunlukKazanclar listine ekledim.
+            ciro += gunlukhasilat;//aldığım gunluk hasılatı kasaya ekledim.
+            gun++;//0 1 2 3 4 5 6 .gunleri çağırdım.
         }
         getOrtalamaKazanc();
-        getOrtalamaninUstundeKazancGünleri();
-        getOrtalamaninAltindaKazancGünleri();
+        getOrtalamaninUstundeKazancGunleri();
+        getOrtalamaninAltindaKazancGunleri();
 
-        System.out.println("günlükkazanclar : " + gunlukKazanclar);
+        System.out.println("gunlukkazanclar : " + gunlukKazanclar);
         System.out.println("ciro  : " + ciro);
         System.out.println("ortalama kazanç : " + getOrtalamaKazanc());
-        System.out.println("ortalamanın üstündeki gün : " + getOrtalamaninUstundeKazancGünleri());
-        System.out.println("ortalamanın altındaki gün : " + getOrtalamaninAltindaKazancGünleri());
+        System.out.println("ortalamanın ustundeki gun : " + getOrtalamaninUstundeKazancGunleri());
+        System.out.println("ortalamanın altındaki gun : " + getOrtalamaninAltindaKazancGunleri());
     }
 
-    private static String getOrtalamaninAltindaKazancGünleri() {//6. adım
+    private static String getOrtalamaninAltindaKazancGunleri() {//6. adım
         String ortAltGun = "";
         for (int i = 0; i < gunlukKazanclar.size(); i++) {
             if (gunlukKazanclar.get(i) < getOrtalamaKazanc()) {
@@ -62,7 +62,7 @@ public class QMarket {
         return ortAltGun;
     }
 
-    private static String getOrtalamaninUstundeKazancGünleri() {//5.adım
+    private static String getOrtalamaninUstundeKazancGunleri() {//5.adım
         String ortUstGun = "";
         for (int i = 0; i < gunlukKazanclar.size(); i++) {
             if (gunlukKazanclar.get(i) > getOrtalamaKazanc()) {
